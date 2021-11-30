@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Linguagem JavaScript</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Linguagem JavaScript</h1>
+        <div class="card-colums">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">1) Média</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="Nota1" class="form-control" placeholder="Nota 1">
+                        </div>
+                        <div class="form-group">
+                            <input id="Nota2" class="form-control" placeholder="Nota 2">
+                        </div>
+                        <div class="form-group">
+                            <input id="Nota3" class="form-control" placeholder="Nota 3">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="medianota()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5media">???</h5>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">2) Categoria</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="inputnascimento" class="form-control" placeholder="Ano Nascimento">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="definecategoria()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="card-footer">
+                        <h5 id="h5idade">???</h5>
+                    </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">3) Tabuada</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="inputValor" class="form-control" placeholder="Digite um valor">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="tabuada()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="card-footer" id='vlrtabuada'>
+                    </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">4) Tempo de Prova</h5>
+                    <form>
+                        <h5>Temo em segundos</h5>
+                        <div class="form-group">
+                            <input id="inputatl1" class="form-control" placeholder="Atleta 1">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputatl2" class="form-control" placeholder="Atleta 2">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputatl3" class="form-control" placeholder="Atleta 3">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="posicao()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="card-footer">
+                        <h5 id ="h5posicao">???</h5>
+                    </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">5) Metros quadrados</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="inputlargura" class="form-control" placeholder="Largura">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputaltura" class="form-control" placeholder="Altura">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="Metroqdr()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="card-footer">
+                        <h5 id="h5mtr">???</h5>
+                    </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">6) Prestação em atraso</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="inputatraso" class="form-control" placeholder="Dias Atraso">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputvlratraso" class="form-control" placeholder="Valor">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="prestacao()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="vlrtotatraso">???</h5>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">7) Positivo ou negativo</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="inputint" class="form-control" placeholder="Entre com um valor inteiro">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="posineg()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5posineg">???</h5>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">8) Menor Número</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="inputvlr1" class="form-control" placeholder="Valor 1">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputvlr2" class="form-control" placeholder="Valor 2">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="menor()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5menor">???</h5>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">9) Soma Menor</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="inputsomavlr1" class="form-control" placeholder="Valor 1">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputsomavlr2" class="form-control" placeholder="Valor 2">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputsomavlr3" class="form-control" placeholder="Valor 3">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputsomavlr4" class="form-control" placeholder="Valor 4">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="menordupla()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5menordupla">???</h5>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">10) Idade em dias</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="inputAnos" class="form-control" placeholder="Anos">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputMeses" class="form-control" placeholder="Meses">
+                        </div>
+                        <div class="form-group">
+                            <input id="inputDias" class="form-control" placeholder="Dias">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="Idadedias()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5idadedias">???</h5>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">11) Album de fotos </h5>
+                    <form>
+                        <div class="form-group">
+                            <button type="button" onclick="definecategoria()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        function medianota(){
+            let nota1 = parseInt(document.getElementById("Nota1").value);
+            let nota2 = parseInt(document.getElementById("Nota2").value);
+            let nota3 = parseInt(document.getElementById("Nota3").value);
+            let soma = nota1 + nota2 + nota3;
+
+            if(isNaN(soma)){
+                document.getElementById('h5media').innerHTML = 'Nota inválida'
+            }
+            else{
+                let media = soma/3
+                if(media < 6){
+                    document.getElementById('h5media').innerHTML = media + " Aprovado";
+                }
+                else{
+                    document.getElementById('h5media').innerHTML = media + " Reprovado";
+                }
+            }
+        }
+        function definecategoria(){
+            let ano = 2021;
+            let anonasc = parseInt(document.getElementById("inputnascimento").value);
+        
+            if(isNaN(anonasc)){
+                document.getElementById('h5idade').innerHTML = 'Ano inválido'
+            }
+            else{
+                let idade = ano - anonasc;
+
+                if(idade >= 5 && idade <=7){
+                    document.getElementById('h5idade').innerHTML = "Infantil"
+                }
+                else if(idade <= 13){
+                    document.getElementById('h5idade').innerHTML = "Juvenil"
+                }
+                else if(idade <= 17){
+                    document.getElementById('h5idade').innerHTML = "Adolescente"
+                }
+                else if(idade > 17){
+                    document.getElementById('h5idade').innerHTML = "Adulto"
+                }
+            }
+        }
+        function Metroqdr(){
+            let largura = parseInt(document.getElementById("inputlargura").value);
+            let altura = parseInt(document.getElementById("inputaltura").value);
+
+            mt2 = largura * altura
+            if(isNaN(mt2)){
+                document.getElementById('h5mtr').innerHTML = 'Entrada invalida'
+            }
+            else{
+                document.getElementById('h5mtr').innerHTML = mt2
+            }
+        }
+        function tabuada(){
+            let valor = parseInt(document.getElementById("inputValor").value);
+            if(isNaN(valor)){
+                document.getElementById('vlrtabuada').innerHTML = 'Entrada invalida'
+            }
+            else{
+                for(i = 1; i < 11; i++){
+                let b = document.createElement('div');
+                b.style = 'margin: 3px';
+                b.innerHTML = i+" * "+ valor + " = " + i*valor;
+
+                document.getElementById('vlrtabuada').appendChild(b);
+                }
+            }
+        }
+        function posicao(){
+            let temp1 = parseInt(document.getElementById("inputatl1").value);
+            let temp2 = parseInt(document.getElementById("inputatl2").value);
+            let temp3 = parseInt(document.getElementById("inputatl3").value);
+            let b = document.createElement('div');
+            let Ouro = ""
+            let Bronze = ""
+            let Prata = ""
+            let verifica = temp1 + temp2 + temp3
+            if(isNaN(verifica)){
+                document.getElementById('h5posicao').innerHTML = 'Entrada invalida'
+            }
+            else{
+
+
+                if(temp1 < temp2 && temp1 < temp3){
+                    Ouro = 'Ouro: Atleta 1'
+                }
+                else if(temp2 < temp1 && temp2 < temp3){
+                    Ouro = 'Ouro: Atleta 2'
+                }
+                else if(temp3 < temp2 && temp3 < temp1){
+                    Ouro = 'Ouro: Atleta 3'
+                }
+
+                if(temp1 > temp2 && temp1 > temp3){
+                    Bronze = 'Bronze: Atleta 1'
+                }
+                else if(temp2 > temp1 && temp2 > temp3){
+                    Bronze = 'Bronze: Atleta 2'
+                }
+                else if(temp3 > temp2 && temp3 > temp1){
+                    Bronze = 'Bronze: Atleta 3'
+                }
+
+                if(temp1 > temp2 && temp1 < temp3 || temp1 < temp2 && temp1 > temp3){
+                    Prata = 'Prata: Atleta 1'
+                }
+                else if(temp2 > temp1 && temp2 < temp3 || temp2 < temp1 && temp2 > temp3){
+                    Prata = 'Prata: Atleta 2'
+                }
+                else if(temp3 > temp2 && temp3 < temp1 || temp3 < temp2 && temp3 > temp1){
+                    Prata = 'Prata: Atleta 3'
+                }
+                document.getElementById('h5posicao').innerHTML = Ouro + "  " + Prata + "  " + Bronze
+            }
+        }
+        function prestacao(){
+            let dias = parseFloat(document.getElementById("inputatraso").value);
+            let valor = parseFloat(document.getElementById("inputvlratraso").value);
+
+            if(isNaN(dias) || isNaN(valor)){
+                document.getElementById('vlrtotatraso').innerHTML = 'Entrada invalida'
+            }
+            else{
+                let total = valor + (valor * (0.02 * dias))
+                let juros = valor * 0.02 * dias
+                let presta = valor + (valor * 0.02)
+                document.getElementById('vlrtotatraso').innerHTML = 'Prestação = '+ presta +' Juros = '+ juros+' Total = '+ total
+            }
+        }
+        function posineg(){
+            let vlr = parseInt(document.getElementById("inputint").value);
+
+            if(isNaN(vlr)){
+                document.getElementById('h5posineg').innerHTML = 'Entrada invalida'
+            }
+            else if(vlr  < 0){
+                document.getElementById('h5posineg').innerHTML = 'Negativo'
+            }
+            else if(vlr > 0){
+                document.getElementById('h5posineg').innerHTML = 'Positivo'
+            }
+            else if(vlr == 0){
+                document.getElementById('h5posineg').innerHTML = 'Nulo'
+            }
+        }
+        function menor(){
+            let vlr1 = parseInt(document.getElementById("inputvlr1").value);
+            let vlr2 = parseInt(document.getElementById("inputvlr2").value);
+
+            if(isNaN(vlr1) || isNaN(vlr2)){
+                document.getElementById('h5menor').innerHTML = 'Entrada invalida'
+            }
+            else{
+                if(vlr1 < vlr2){
+                    document.getElementById('h5menor').innerHTML = 'Valor 1 é o menor'
+                }
+                else{
+                    document.getElementById('h5menor').innerHTML = 'Valor 2 é o menor'
+                }
+            }
+        }
+        function menordupla(){
+            let vlr1 = parseInt(document.getElementById("inputsomavlr1").value);
+            let vlr2 = parseInt(document.getElementById("inputsomavlr2").value);
+            let vlr3 = parseInt(document.getElementById("inputsomavlr3").value);
+            let vlr4 = parseInt(document.getElementById("inputsomavlr4").value);
+            let soma1 = vlr1 + vlr2
+            let soma2 = vlr3 + vlr4
+            if(isNaN(soma1) || isNaN(soma2)){
+                document.getElementById('h5menordupla').innerHTML = 'Entrada invalida'
+            }
+            else{
+                if(soma1 < soma2){
+                    document.getElementById('h5menordupla').innerHTML = 'Soma do primeiro e segundo múmero é o menor'
+                }
+                else{
+                    document.getElementById('h5menordupla').innerHTML = 'Soma do terceiro e quarto múmero é o menor'
+                }
+            }
+        }
+        function Idadedias(){
+            let ano = parseInt(document.getElementById("inputAnos").value);
+            let mes = parseInt(document.getElementById("inputMeses").value);
+            let dia = parseInt(document.getElementById("inputDias").value);
+
+            if(isNaN(ano) || isNaN(mes) || isNaN(dia)){
+                document.getElementById('h5idadedias').innerHTML = 'Entrada invalida'
+            }
+            else{
+                soma = (ano * 365) + (mes * 30) + dia
+                document.getElementById('h5idadedias').innerHTML = soma + ' Dias'
+            }
+        }
+    </script>
+  </body>
+</html>
